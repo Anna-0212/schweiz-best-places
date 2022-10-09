@@ -34,3 +34,43 @@ h1, h2, p {
   color: #342638;
 }
 
+@media all and (max-width: 420px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .btn-text-more {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 280px) {
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 13px;
+  }
+.mountain {
+  width: 250px;
+  }
+  .btn-text-more {
+    font-size: 11px;
+  }
+  .btn-mountain {
+    margin: 10px;
+    width: 90px;
+    padding: 5px 15px;
+  }
+}
