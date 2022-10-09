@@ -1,15 +1,13 @@
 import { useState } from 'react';
-import { data } from './data'
+import { data } from './data';
 import './App.css';
 
 function App() {
 
   const [mountain, setMountain] = useState(0);
-  const { id, image, name, description, showMore } = data[mountain];
+  const { id, image, name, description } = data[mountain];
 
   const [showText, setShowText] = useState(false);
-
-  console.log(data[mountain])
 
   const previousMountain = () => {
     setMountain((mountain => {
