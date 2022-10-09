@@ -25,6 +25,7 @@ function App() {
   const nextMountain = () => {
     setMountain((mountain => {
       mountain ++;
+      setShowText(!showText)
 
       if (mountain > data.length -1) {
         mountain = 0;
@@ -40,7 +41,7 @@ function App() {
   
 
   return (
-    <div> 
+    <div className='big-container'> 
       <div className="container">
         <h1>My favorite places in Switzerland</h1> 
       </div>
@@ -48,19 +49,20 @@ function App() {
         <h2> {id}. {name}</h2>
       </div>
       <div className="container">
-        <img src={image} width="400px" alt="mountain" className="mountain" />
+        <img src={image} width="300px" alt="mountain" className="mountain" />
       </div>
       <div className="container">
-        <p> {showText ? description : description.substring(0, 150) + "..."}
-        <button onClick ={() => showTextClick(element)}> {showMore ? "Show less" : "Show more"}</button>
+        <p className='text'> {showText ? description : description.substring(0, 150) + "..."}
+        <button className='btn-text-more' onClick ={() => setShowText(!showText)}> {showText ? "Show less" : "Show more"}</button>
         </p>
       </div>
       <div className="btn container">
-        <button onClick = {previousMountain} className="mountain">previous</button>
-        <button onClick = {nextMountain} className="mountain">next</button>
+        <button onClick = {previousMountain} className="btn-mountain">previous</button>
+        <button onClick = {nextMountain} className="btn-mountain">next</button>
       </div>
     </div>
   );
 }
 
 export default App;
+
