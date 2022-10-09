@@ -25,7 +25,6 @@ function App() {
   const nextMountain = () => {
     setMountain((mountain => {
       mountain ++;
-      setShowText(!showText)
 
       if (mountain > data.length -1) {
         mountain = 0;
