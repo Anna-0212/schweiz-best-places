@@ -34,11 +34,6 @@ function App() {
       return mountain;
     }))
   }
-  const showTextClick = (element) => {
-    element.showMore = !element.showMore 
-    setShowText(!showText)
-  }
-  
 
   return (
     <div className='big-container'> 
